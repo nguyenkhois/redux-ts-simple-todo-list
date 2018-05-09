@@ -1,5 +1,5 @@
 # Redux-TypeScript - Simple To-Do list
-A simple web application based on Redux and TypeScript with using [interfaces](http://www.typescriptlang.org/docs/handbook/interfaces.html) which is one of TypeScript’s core principles. ([View online demo](https://nguyenkhois.github.io/redux-ts-simple-todo-list/dist/))
+A simple web application based on Redux and TypeScript with using [interfaces](http://www.typescriptlang.org/docs/handbook/interfaces.html) which is one of TypeScript’s core principles. ([View online demo](https://nguyenkhois.github.io/typescript-simple-todo-list/dist))
 
 ## Screenshot
 ![Screenshot](src/screenshot.png)
