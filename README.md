@@ -1,5 +1,5 @@
 # Redux-TypeScript - Simple To-Do list
-The simple Redux-TypeScript web application. ([View online demo](https://nguyenkhois.github.io/redux-ts-simple-todo-list/dist/))
+A simple web application based on Redux and TypeScript with using [interfaces](http://www.typescriptlang.org/docs/handbook/interfaces.html) which is one of TypeScript’s core principles. ([View online demo](https://nguyenkhois.github.io/redux-ts-simple-todo-list/dist/))
 
 ## Screenshot
 ![Screenshot](src/screenshot.png)
@@ -21,6 +21,7 @@ Webpack Dev Server reload automatically your web browser whenever a change is ma
 * Run `npm run build:all` to build all your files (*.js and styles.css) with `--mode production` to `dist` folder
 
 ## References
+* [TypeScript interfaces](http://www.typescriptlang.org/docs/handbook/interfaces.html)
 * [Migrating from JavaScript](https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html)
 * [Leveling Up with React: Redux](https://css-tricks.com/learning-react-redux/)
 * [Non-mutating methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype#Accessor_methods)

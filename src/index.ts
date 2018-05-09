@@ -9,12 +9,23 @@ let action = {
             isDone: <task_status:true/false> }
 }*/
 
+//INTERFACES
+interface Task {
+    id: number, 
+    description?: string, 
+    isDone?: boolean
+}
+interface Action {
+    type: string,
+    task?: Task
+}
+
 //FUNCTIONS
 function renderContent(){
     let allTasks = store.getState(); //Redux method
     let todoList = <HTMLElement>document.createElement('ul');
 
-    allTasks.map((item: any)=>{
+    allTasks.map((item: Task)=>{
         let task = <HTMLElement>document.createElement('li');
 
         //Create checkbox
@@ -48,7 +59,7 @@ function renderContent(){
 
     //Render whole the app and a button "Remove completed" at the end of todo list
     dspResults.innerHTML = '';
-    if (allTasks.filter((item: any)=>item.isDone).length > 0){
+    if (allTasks.filter((item: Task)=>item.isDone).length > 0){
         let btnRemoveCompleted = <HTMLElement>document.createElement('button')
         btnRemoveCompleted.appendChild(document.createTextNode('Remove completed'));
         btnRemoveCompleted.setAttribute('type','button');
@@ -60,23 +71,23 @@ function renderContent(){
 }
 
 function handleRemove(itemId: number){
-    let action = {type:'REMOVE_TASK', task: {id: itemId}};
+    let action: Action = {type:'REMOVE_TASK', task: {id: itemId}};
     store.dispatch(action); //Redux method
 }
 
 function handleRemoveCompleted(){
-    let action = {type: 'REMOVE_COMPLETED'};
+    let action: Action = {type: 'REMOVE_COMPLETED'};
     store.dispatch(action);
 }
 
 function handleCheck(itemId: number){
-    let action = {type:'CHECKED', task: {id: itemId}};
+    let action: Action = {type:'CHECKED', task: {id: itemId}};
     store.dispatch(action); //Redux method
 }
 
 //MAIN
 // STEP 1 - Create the reducer - yourReducer(currentState, yourAction)
-let userReducer = (state: any, action: any) => {
+let userReducer = (state: any, action: Action) => {
     if (state === undefined)
         state = [];
     
@@ -85,16 +96,16 @@ let userReducer = (state: any, action: any) => {
         case 'ADD_TASK':
             return state.concat(action.task);
         case 'REMOVE_TASK':
-            return state.filter((item: any)=>item.id !== action.task.id);
+            return state.filter((item: Task)=>item.id !== action.task.id);
         case 'CHECKED':
-            const itemIndex = state.findIndex((item: any)=>item.id === action.task.id);
-            const newState = state.map((item: any, index: any)=> index === itemIndex ? {...item, isDone: !item.isDone} : item);
+            const itemIndex = state.findIndex((item: Task)=>item.id === action.task.id);
+            const newState = state.map((item: Task, index: number)=> index === itemIndex ? {...item, isDone: !item.isDone} : item);
             return newState;
         case 'REMOVE_COMPLETED':
-            return state.filter((item: any)=>!item.isDone);
+            return state.filter((item: Task)=>!item.isDone);
         default:
             return state;
-    } 
+    }     
 };
 
 // STEP 2 - Create a store by passing in the reducer
@@ -109,8 +120,8 @@ txtInput.focus();
 txtInput.addEventListener('keydown',e=>{
     let userInput = txtInput.value.trim();
     if (e.keyCode === 13 && userInput.length > 0){
-        let newTask = { id: Date.now(), description: userInput, isDone: false };
-        let action = { type: 'ADD_TASK', task: newTask };
+        let newTask: Task = { id: Date.now(), description: userInput, isDone: false };
+        let action: Action = { type: 'ADD_TASK', task: newTask };
         store.dispatch(action); //Redux method
 
         txtInput.value = '';
