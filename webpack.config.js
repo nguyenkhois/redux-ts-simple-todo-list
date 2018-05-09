@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const WebpackNotifierPlugin = require("webpack-notifier");
 
 module.exports = {
-    devtool: 'source-map',
+    //devtool: 'source-map',
     mode: 'development', // whether we're building for dev or prod
     entry: './src/index.ts',// which file to begin with, 
     output: {
