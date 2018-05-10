@@ -25,7 +25,7 @@ export class HandleActions {
 
 // Handle render hold the app
 let dspResults = <HTMLInputElement>document.getElementById('dspResults');
-export class HandleRender extends HandleActions{
+export class HandleRender extends HandleActions {
     store: any;
     constructor (inputStore: any) {
         super(inputStore);
