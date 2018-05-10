@@ -3,7 +3,7 @@ A simple web application based on TypeScript and Redux with using of [classes](h
 
 You may know about these things:
 * Using TypeScript's classes, interfaces
-* Import/ export classes
+* Import/ export classes, interfaces
 * Using packages by package.json
 * Configuring Webpack Dev Server (webpack.config.js), TypeScript config (tsconfig.json)
 
