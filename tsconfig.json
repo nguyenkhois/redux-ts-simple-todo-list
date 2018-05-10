@@ -4,8 +4,8 @@
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
-        "outFile": ".dist/bundle.js",
-        //"sourceMap": true,
+        //"outFile": ".dist/bundle.js",
+        "sourceMap": true,
         "moduleResolution": "node",
         "allowJs": true,
         "target": "es5"

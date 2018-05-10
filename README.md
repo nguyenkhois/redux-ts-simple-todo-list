@@ -26,3 +26,4 @@ Webpack Dev Server reload automatically your web browser whenever a change is ma
 * [Migrating from JavaScript](https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html)
 * [Leveling Up with React: Redux](https://css-tricks.com/learning-react-redux/)
 * [Non-mutating methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype#Accessor_methods)
+* [Webpack Dev Server - Devtool](https://webpack.js.org/configuration/devtool/)
