@@ -1,6 +1,12 @@
 # TypeScript - Simple To-Do list
 A simple web application based on TypeScript and Redux with using of [classes](https://www.typescriptlang.org/docs/handbook/classes.html) and [interfaces](http://www.typescriptlang.org/docs/handbook/interfaces.html) which is one of TypeScript’s core principles. ([View online demo](https://nguyenkhois.github.io/typescript-simple-todo-list/dist))
 
+You may know about these things:
+* Using TypeScript's classes, interfaces
+* Import/ export classes
+* Using packages by package.json
+* Configuring Webpack Dev Server (webpack.config.js), TypeScript config (tsconfig.json)
+
 ## Screenshot
 ![Screenshot](src/screenshot.png)
 
