@@ -11,10 +11,6 @@ let action = {
             isDone: <task_status:true/false> }
 }*/
 
-// Get HTML elements
-let txtInput = <HTMLInputElement>document.getElementById('txtInput');
-let dspResults = <HTMLInputElement>document.getElementById('dspResults');
-
 // ---------- MAIN ----------
 // STEP 1 - Create the reducer
 let userReducer = (state: any, action: Action) => {
@@ -41,11 +37,11 @@ let userReducer = (state: any, action: Action) => {
 // STEP 2 - Create a store by passing in the reducer
 let store = createStore(userReducer); // Redux method
 
-// Rerender automatically whenever the state changed
 let objTodoList = new HandleRender(store);
-store.subscribe(objTodoList.renderContent); // Redux method
+store.subscribe(objTodoList.renderContent); // Redux method - Rerender automatically whenever the state changed
 
 // STEP 3 - Dispatch your action to the store. It changes the state by store.dispatch(action);
+let txtInput = <HTMLInputElement>document.getElementById('txtInput');
 txtInput.focus();
 txtInput.addEventListener('keydown',e=>{
     let userInput = txtInput.value.trim();
