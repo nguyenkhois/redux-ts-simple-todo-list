@@ -8,6 +8,8 @@ You may know about these things:
 * Using packages by package.json
 * Configuring Webpack Dev Server (webpack.config.js), TypeScript config (tsconfig.json)
 
+You may want to view another example which based only on JavaScript and Redux. ([View repository](https://github.com/nguyenkhois/redux-simple-todo-list)) 
+
 ## Screenshot
 ![Screenshot](src/screenshot.png)
 
